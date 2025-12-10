@@ -35,7 +35,7 @@ export default function Services() {
         <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Hero Content */}
-        <div className="container mx-auto px-6 py-20 mt-15 relative z-10">
+        <div className="container mx-auto px-6 py-20 mt-10 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

@@ -13,55 +13,66 @@ export default function About() {
   return (
     <div className="overflow-hidden bg-gradient-to-b from-blue-50 via-white to-blue-100 text-gray-800">
 
-      {/* ========================= HEADER SECTION WITH VIDEO ========================= */}
-      <div className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
+      {/* ========================= UPDATED ABOUT PAGE HERO (MATCHES HOME PAGE) ========================= */}
+<div className="relative w-full min-h-screen overflow-hidden overflow-x-hidden">
 
-        {/* Background Video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        >
-          <source src={v3} type="video/mp4" />
-        </video>
+  {/* Background Video */}
+  <video
+    className="absolute top-0 left-0 w-full h-full object-cover"
+    src={v3}  // Your About page video
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
 
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* Content */}
-        <div className="relative z-10 text-center flex flex-col items-center justify-center h-full text-white px-4">
-
-          <motion.h4
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-base md:text-lg font-semibold uppercase tracking-wide"
-          >
-            A Few Words About
-          </motion.h4>
-
-          <motion.h1
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="text-4xl md:text-5xl font-bold mt-3"
-          >
-            Our Company
-          </motion.h1>
-
-          <motion.h3
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-base md:text-lg mt-4 opacity-90"
-          >
-            Transforming Today, Tomorrow, Forever
-          </motion.h3>
-
-        </div>
+  {/* Foreground Content */}
+  <div className="relative z-10 flex items-center mt-10 justify-center min-h-screen px-6">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="flex flex-col md:flex-row gap-10 bg-white/10 backdrop-blur-xl p-10 rounded-3xl shadow-xl"
+    >
+      {/* LEFT IMAGE (OPTIONAL — you can change or remove) */}
+      <div className="overflow-hidden rounded-3xl w-full md:w-1/2">
+        <motion.img
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.4 }}
+          src="about.jpg" // You can replace this with any About image
+          className="w-full rounded-3xl shadow-xl"
+        />
       </div>
+
+      {/* RIGHT TEXT */}
+      <div className="text-white max-w-xl">
+        <p className="text-sm font-semibold uppercase tracking-wide">
+          A Few Words About Us
+        </p>
+
+        <h1 className="text-4xl font-bold mt-3 leading-snug">
+          Our Company <br /> Transforming Today, Tomorrow, Forever
+        </h1>
+
+        <p className="mt-3 opacity-90">
+          Leadoptima is committed to delivering innovative solutions across IT,
+          Engineering, Staffing, and Skill Development. With a futuristic mindset
+          and client-first approach, we aim to redefine excellence.
+        </p>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          className="mt-5 bg-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+        >
+          Discover More
+        </motion.button>
+      </div>
+    </motion.div>
+  </div>
+</div>
 
       {/* ========================= ABOUT US SECTION ========================= */}
       <section className="px-5 md:px-20 py-16 md:py-20 text-center">
