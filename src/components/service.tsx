@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.12 } },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
