@@ -67,7 +67,7 @@ export default function Services() {
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="mt-6 bg-white text-indigo-700 font-semibold px-6 py-3 rounded-lg shadow-lg"
+                className="mt-5 bg-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
               >
                 Talk to us
               </motion.button>
